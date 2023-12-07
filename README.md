@@ -10,7 +10,7 @@ npm install googleapis nodemon
 npm start
 
 
-note on areas where your code can be improved.
+Note on areas where the code can be improved.
 1.Error handling: The code currently logs any errors that occur during the execution but does not
   handle them in a more robust manner.
 2.Code efficiency: The code could be optimized to handle larger volumes of emails more efficiently.
