@@ -5,19 +5,6 @@
 
 const { google } = require("googleapis");
 
-/*1.This id , secret and redirected uri obtained from the Google Cloud Console.
-    https://console.developers.google.com by creating project there and setting up project.
- 
-  2.This refreshtoken is generated from the redirected uri https://developers.google.com/  oauthplayground
-    and here authorized this https://mail.google.com scope api by email and in setting of scope api by putting client id and client secret then when authorizes done this generate 
-    authorization code .
-
-  3.Exchange authorization code for refresh token by clicking on exchange text. 
-
-  4.import the credentials.js file  
-
-  5.All the steps described in detail explaination available in readme.md check it .
- */
 const {
   CLIENT_ID,
   CLEINT_SECRET,
