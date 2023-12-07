@@ -1,7 +1,12 @@
 //imported required packages
-/*1.googleapis: This package is imported from the googleapis module and provides the necessary functionality to interact with various Google APIs, including the Gmail API.
+/*
+  1.googleapis : This package is imported from the googleapis module and provides the necessary 
+  functionality to interact with various Google APIs, including the Gmail API.
 
-  2.OAuth2: The OAuth2 class from the google.auth module is used to authenticate the application and obtain an access token for making requests to the Gmail API. It handles token refresh and retrying requests if necessary.*/
+  2.OAuth2 : The OAuth2 class from the google.auth module is used to authenticate the application 
+    and obtain an access token for making requests to the Gmail API. It handles token refresh and 
+    retrying requests if necessary.
+*/
 
 const { google } = require("googleapis");
 
@@ -12,8 +17,8 @@ const {
   REFRESH_TOKEN,
 } = require("./credentials");
 
-//implemented the “Login with google” API here.
-//basically OAuth2 module allow to retrive an access token, refresh it and retry the request.
+// Implemented the “Login with google” API here.
+// Basically OAuth2 module allow to retrive an access token, refresh it and retry the request.
 const oAuth2Client = new google.auth.OAuth2(
   CLIENT_ID,
   CLEINT_SECRET,
@@ -154,7 +159,7 @@ function getRandomInterval(min, max) {
 //Setting Interval and calling main function in every interval
 setInterval(checkEmailsAndSendReplies, getRandomInterval(45, 120) * 1000);
 
-/*note on areas where your code can be improved.
+/*Note on areas where the code can be improved.
   1.Error handling: The code currently logs any errors that occur during the 
     execution but does not handle them in a more robust manner.
 
@@ -168,7 +173,7 @@ setInterval(checkEmailsAndSendReplies, getRandomInterval(45, 120) * 1000);
 
   These are some areas where the code can be improved, but overall, it provides implementation of 
     auto-reply functionality using the Gmail API.
-    
+
   5.Time Monitoring: The code currently use randominterval function to generate seconds and 
     in this code can be improved by adding cron jobs package to schedule email tasks 
 */
